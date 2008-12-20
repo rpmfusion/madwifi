@@ -3,7 +3,7 @@
 
 Name:           madwifi
 Version:        0.9.4
-Release:        60.%(echo %{revision}| tr - _)%{?dist}
+Release:        61.%(echo %{revision}| tr - _)%{?dist}
 Summary:        Kernel module and Diagnostic tools for Atheros wireless devices
 
 Group:          System Environment/Base
@@ -17,6 +17,9 @@ Requires:       madwifi-kmod >= %{version}
 
 Source1:        madwifi-modprobe.d
 Source2:        ath5k_blacklist-modprobe.d
+
+# kmod not supported for ppc64
+ExcludeArch:    ppc64
 
 %description
 madwifi is the Multiband Atheros Driver for WiFi, a linux device
@@ -70,6 +73,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Sat Dec 20 2008 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info> - 0.9.4-61.r3861_20080903
+- ExcludeArch ppc64
+
 * Tue Sep 30 2008 kwizart < kwizart at gmail.com > - 0.9.4-60.r3861-20080903
 - Move from trunk to hal-0.10.5.6 with r3861-20080903
 

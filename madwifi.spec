@@ -3,7 +3,7 @@
 
 Name:           madwifi
 Version:        0.9.4
-Release:        61.%(echo %{revision}| tr - _)%{?dist}
+Release:        62.%(echo %{revision}| tr - _)%{?dist}
 Summary:        Kernel module and Diagnostic tools for Atheros wireless devices
 
 Group:          System Environment/Base
@@ -73,6 +73,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Sun Mar 29 2009 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info> - 0.9.4-62.r3861_20080903
+- rebuild for new F11 features
+
 * Sat Dec 20 2008 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info> - 0.9.4-61.r3861_20080903
 - ExcludeArch ppc64
 
